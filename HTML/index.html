@@ -1,9 +1,96 @@
+<!DOCTYPE html>
 <html>
 <head>
-<title>BitIndex</title>
+		<title></title>
+			<!--  meta goes here -->
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<!-- cs at the start of the webpage -->
+		<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="./css/bootstrap-theme.min.css">
+		<link rel="stylesheet" type="text/css" href="./css/main.css">
+
+				<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+				<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+		
+
 </head>
+
 <body>
-<h1>BitCamp</h1>
-<p>Ovo je index</p>
+	<!--  nav copied here - navigation element...
+	class-e koje su nam dopustene, fixed-top - ostaje gore fixirano!
+	container - sirina 970 pixela, i prilagadja se ekranu!
+	a van ovog div container stavljamo nesto sto hoce da zauzeme citavu sirinu!
+	- button tag - je onaj mali dugmic...tri crtice...koje se pojave kad dovoljno smanjimo ekran!!!
+	-navbar-brand - brend ikona u navbaru i ime;
+	- navbar slijedeci ima collapse, znaci kad se smanji da nestane;
+	- i ima linkove href:...
+	 -->
+	
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+
+
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    <div class="row">
+        <form method="get" action="/index.html">
+            <div class="col-lg-6">
+                <div class="well well-sm"><strong><span class="glyphicon glyphicon-asterisk"></span>Required Field</strong></div>
+                
+                <div class="form-group">
+                    <label for="InputEmail">Enter Email</label>
+                    <div class="input-group">
+                        <input type="email" class="form-control" id="InputEmailFirst" name="InputEmail" placeholder="Enter Email" required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="InputMessage">Enter Message</label>
+                    <div class="input-group">
+                        <textarea name="InputMessage" id="InputMessage" class="form-control" rows="5" required></textarea>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info pull-right">
+            </div>
+        </form>
+        <div class="col-lg-5 col-md-push-1">
+            <div class="col-md-12">
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+	<script type="text/javascript" src="./js/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/jbootstrap.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 </body>
 </html>

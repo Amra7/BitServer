@@ -36,7 +36,7 @@ public class ServerNew {
 			while (true) {
 				Socket client = server.accept();
 				Logger.log("applicationLog", client.getInetAddress().getHostAddress()+ " just connected!");
-				Connection con = new Connection(client);
+				ConnectionNew con = new ConnectionNew(client);
 			
 				pool.submit(con);
 

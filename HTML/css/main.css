@@ -1,0 +1,53 @@
+ h1{
+	font-size: 20 px;
+	align-self: strech;
+	font-family: "courier", Georgia, Serif;
+	font-weight: bold;
+}
+*{
+	background-color:#E6E6E6; 
+	/*
+	background-image: url("http://www.sheepscotgeneral.com/wp-content/uploads/2013/10/Light-Wood-Background-Wallpaper.jpg");
+	*/
+}
+
+body{
+	 background-color:#E6E6E6; 
+	 	/*
+	background-image: url("http://www.sheepscotgeneral.com/wp-content/uploads/2013/10/Light-Wood-Background-Wallpaper.jpg");
+	*/
+}
+.text-muted{
+	color: red;
+}
+
+.container-fluid{
+    text-align: center;
+    color: #171717;
+    font-family: "courier", Georgia, Serif;
+
+}
+.row{
+	font-size: 30px;
+	font-style: initial;
+}
+.img-responsive{
+	width: 100% ;
+}
+
+:photo{
+	height: 200;
+	width
+}
+
+div img{
+	width:  300px;
+	height:  300px;
+}
+
+p {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 50px;
+}

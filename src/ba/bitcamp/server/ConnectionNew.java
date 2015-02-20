@@ -46,14 +46,23 @@ public class ConnectionNew implements Runnable {
 			return;
 		}
 		String line = "";
+		String tempLine ="";
+		
 		try {
 
 			
-			while ((line = read.readLine()) != null) {
-				if (line.contains("GET") || line.isEmpty()) {
+			while ((tempLine = read.readLine()) != null) {
+				if (tempLine.contains("GET") || tempLine.contains("POST")) {
+					line = tempLine;
 					// System.out.println("We found get!");
-					break;
+					if(line.contains("GET"))
+						break;
+					
+			    //  provremeno izkomentrirano
+				//	break;
 				}
+				
+				System.out.println(tempLine);
 			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -61,7 +70,7 @@ public class ConnectionNew implements Runnable {
 		}
 			if (!line.contains("GET")) {
 				Logger.log("warning", "Was not GET request!");
-				Response.error(write, "Invalid request"); // browseru odgovaramo
+				ResponseNew.error(write, "Invalid request"); // browseru odgovaramo
 															// "Invalid request"
 				closeClient();
 				return;
@@ -72,7 +81,7 @@ public class ConnectionNew implements Runnable {
 			try {
 				fis = new FileInputStream(fileName);
 			} catch (FileNotFoundException e) {
-				Response.error(write, "This is not page you are looking for");
+				ResponseNew.error(write, "This is not page you are looking for");
 				Logger.log("warning", "Client requested missing file" + e.getMessage());
 				closeClient();
 				return;
@@ -90,12 +99,12 @@ public class ConnectionNew implements Runnable {
 				//ovdje se desio 500 Internal server error
 				
 				Logger.log("error", e.getMessage());
-				Response.serverError(write, "A wll tryied group of monkeys to fix the problem!");
+				ResponseNew.serverError(write, "A wll tryied group of monkeys to fix the problem!");
 				closeClient();
 				return;
 			}
 			
-			Response.ok(write, sb.toString());
+			ResponseNew.ok(write, sb.toString());
 			closeClient();
 
 	}
@@ -123,7 +132,7 @@ public class ConnectionNew implements Runnable {
 		if (fileName == null || fileName.equals("/")) {
 			// ako je posalo nesto sto nema validan argument saljemo ga u
 			// index.html file
-			return "index.html";
+			return basePath + "index.html";
 		}
 
 		// mi predpostaljamo da ce file biti tipa .html bez obzira sta je iza tacke
